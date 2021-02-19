@@ -23,7 +23,11 @@
 					},
 					"dataset": {
 						"referenceName": "VanArsdel_OnPremRentals",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"SCHEMA": "sys",
+							"TABLE_NAME": "TABLE_SCHEMA"
+						}
 					},
 					"firstRowOnly": false
 				}
@@ -98,7 +102,7 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "SouthridgeDataLake_CloudStreaming",
+									"referenceName": "SouthridgeDataLake",
 									"type": "DatasetReference",
 									"parameters": {
 										"filename": {

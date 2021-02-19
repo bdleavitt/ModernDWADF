@@ -101,7 +101,7 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "SouthridgeDataLake_CloudStreaming",
+									"referenceName": "SouthridgeDataLake",
 									"type": "DatasetReference",
 									"parameters": {
 										"filename": {
