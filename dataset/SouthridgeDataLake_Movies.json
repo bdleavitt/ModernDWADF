@@ -10,6 +10,9 @@
 				"type": "string"
 			}
 		},
+		"folder": {
+			"name": "Destinations"
+		},
 		"annotations": [],
 		"type": "Parquet",
 		"typeProperties": {

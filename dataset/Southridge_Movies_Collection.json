@@ -5,6 +5,9 @@
 			"referenceName": "Southridge_Movie_Catalog",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "Sources"
+		},
 		"annotations": [],
 		"type": "CosmosDbSqlApiCollection",
 		"schema": {

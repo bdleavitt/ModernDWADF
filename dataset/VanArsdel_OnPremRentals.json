@@ -13,6 +13,9 @@
 				"type": "string"
 			}
 		},
+		"folder": {
+			"name": "Sources"
+		},
 		"annotations": [],
 		"type": "SqlServerTable",
 		"schema": [],

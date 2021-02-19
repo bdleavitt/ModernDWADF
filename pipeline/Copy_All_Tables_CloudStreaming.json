@@ -22,7 +22,7 @@
 						"partitionOption": "None"
 					},
 					"dataset": {
-						"referenceName": "CloudSales",
+						"referenceName": "Southridge_CloudSales",
 						"type": "DatasetReference"
 					},
 					"firstRowOnly": false
@@ -85,7 +85,7 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "CloudStreaming_Parameterized",
+									"referenceName": "Southridge_CloudStreaming_Parameterized",
 									"type": "DatasetReference",
 									"parameters": {
 										"schema": {

@@ -1,5 +1,5 @@
 {
-	"name": "CloudStreaming_Parameterized",
+	"name": "Southridge_CloudStreaming_Parameterized",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "SouthridgeCloudStreaming",
@@ -12,6 +12,9 @@
 			"table": {
 				"type": "string"
 			}
+		},
+		"folder": {
+			"name": "Sources"
 		},
 		"annotations": [],
 		"type": "AzureSqlTable",

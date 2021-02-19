@@ -1,9 +1,12 @@
 {
-	"name": "CloudSales",
+	"name": "Southridge_CloudSales",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "SouthridgeCloudStreaming",
 			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Sources"
 		},
 		"annotations": [],
 		"type": "AzureSqlTable",
