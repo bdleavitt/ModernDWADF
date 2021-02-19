@@ -22,7 +22,7 @@
 						"partitionOption": "None"
 					},
 					"dataset": {
-						"referenceName": "VanArsdel_OnPremRentals",
+						"referenceName": "VanArsdel_OnPremRentals_Parameterized",
 						"type": "DatasetReference",
 						"parameters": {
 							"SCHEMA": "sys",
@@ -94,7 +94,7 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "VanArsdel_OnPremRentals",
+									"referenceName": "VanArsdel_OnPremRentals_Parameterized",
 									"type": "DatasetReference",
 									"parameters": {
 										"SCHEMA": {

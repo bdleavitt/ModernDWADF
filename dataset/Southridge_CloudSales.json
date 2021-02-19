@@ -6,7 +6,7 @@
 			"type": "LinkedServiceReference"
 		},
 		"folder": {
-			"name": "Sources"
+			"name": "Meta Data"
 		},
 		"annotations": [],
 		"type": "AzureSqlTable",
