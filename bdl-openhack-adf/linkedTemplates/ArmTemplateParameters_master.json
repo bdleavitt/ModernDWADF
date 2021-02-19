@@ -5,6 +5,9 @@
 		"factoryName": {
 			"value": "bdl-openhack-adf"
 		},
+		"FourthCoffeeFileSystem_password": {
+			"value": ""
+		},
 		"SouthridgeCloudStreaming_connectionString": {
 			"value": ""
 		},
@@ -19,6 +22,12 @@
 		},
 		"VanArsdelSQL_connectionString": {
 			"value": ""
+		},
+		"FourthCoffeeFileSystem_properties_typeProperties_host": {
+			"value": "C:\\Rentals"
+		},
+		"FourthCoffeeFileSystem_properties_typeProperties_userId": {
+			"value": "southridge"
 		},
 		"SouthridgeDataLake_properties_typeProperties_url": {
 			"value": "https://bdlopenhackstorage.dfs.core.windows.net"

@@ -7,6 +7,10 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "bdl-openhack-adf"
 		},
+		"FourthCoffeeFileSystem_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'FourthCoffeeFileSystem'"
+		},
 		"SouthridgeCloudStreaming_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'SouthridgeCloudStreaming'"
@@ -26,6 +30,14 @@
 		"VanArsdelSQL_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'VanArsdelSQL'"
+		},
+		"FourthCoffeeFileSystem_properties_typeProperties_host": {
+			"type": "string",
+			"defaultValue": "C:\\Rentals"
+		},
+		"FourthCoffeeFileSystem_properties_typeProperties_userId": {
+			"type": "string",
+			"defaultValue": "southridge"
 		},
 		"SouthridgeDataLake_properties_typeProperties_url": {
 			"type": "string",
@@ -70,15 +82,44 @@
 					"Southridge_Movie_Catalog_connectionString": {
 						"value": "[parameters('Southridge_Movie_Catalog_connectionString')]"
 					},
+					"FourthCoffeeFileSystem_password": {
+						"value": "[parameters('FourthCoffeeFileSystem_password')]"
+					},
 					"VanArsdelSQL_connectionString": {
 						"value": "[parameters('VanArsdelSQL_connectionString')]"
 					},
 					"SouthridgeDataLake_properties_typeProperties_url": {
 						"value": "[parameters('SouthridgeDataLake_properties_typeProperties_url')]"
+					},
+					"FourthCoffeeFileSystem_properties_typeProperties_host": {
+						"value": "[parameters('FourthCoffeeFileSystem_properties_typeProperties_host')]"
+					},
+					"FourthCoffeeFileSystem_properties_typeProperties_userId": {
+						"value": "[parameters('FourthCoffeeFileSystem_properties_typeProperties_userId')]"
 					}
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "bdl-openhack-adf_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'bdl-openhack-adf_ArmTemplate_0')]"
+			]
 		}
 	]
 }
