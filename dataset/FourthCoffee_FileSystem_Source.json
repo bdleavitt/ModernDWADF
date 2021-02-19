@@ -1,0 +1,20 @@
+{
+	"name": "FourthCoffee_FileSystem_Source",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "FourthCoffeeFileSystem",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Sources"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "FileServerLocation",
+				"fileName": "*.csv"
+			}
+		}
+	}
+}
