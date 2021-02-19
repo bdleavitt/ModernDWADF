@@ -1,5 +1,5 @@
 {
-	"name": "SouthridgeDataLake_CloudStreaming",
+	"name": "SouthridgeDataLake",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "SouthridgeDataLake",
@@ -7,6 +7,12 @@
 		},
 		"parameters": {
 			"filename": {
+				"type": "string"
+			},
+			"source_company": {
+				"type": "string"
+			},
+			"source_system": {
 				"type": "string"
 			}
 		},
@@ -22,7 +28,10 @@
 					"value": "@dataset().filename",
 					"type": "Expression"
 				},
-				"folderPath": "raw/southridge/CloudStreaming",
+				"folderPath": {
+					"value": "@concat('raw/', dataset().source_company, '/', dataset().source_system)",
+					"type": "Expression"
+				},
 				"fileSystem": "datalake"
 			},
 			"compressionCodec": "snappy"
