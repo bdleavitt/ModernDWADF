@@ -1,0 +1,84 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "bdl-openhack-adf"
+		},
+		"SouthridgeCloudStreaming_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SouthridgeCloudStreaming'"
+		},
+		"SouthridgeDataLake_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'SouthridgeDataLake'"
+		},
+		"SouthridgeVideoDB_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SouthridgeVideoDB'"
+		},
+		"Southridge_Movie_Catalog_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'Southridge_Movie_Catalog'"
+		},
+		"VanArsdelSQL_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'VanArsdelSQL'"
+		},
+		"SouthridgeDataLake_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://bdlopenhackstorage.dfs.core.windows.net"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "bdl-openhack-adf_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"SouthridgeCloudStreaming_connectionString": {
+						"value": "[parameters('SouthridgeCloudStreaming_connectionString')]"
+					},
+					"SouthridgeDataLake_accountKey": {
+						"value": "[parameters('SouthridgeDataLake_accountKey')]"
+					},
+					"SouthridgeVideoDB_connectionString": {
+						"value": "[parameters('SouthridgeVideoDB_connectionString')]"
+					},
+					"Southridge_Movie_Catalog_connectionString": {
+						"value": "[parameters('Southridge_Movie_Catalog_connectionString')]"
+					},
+					"VanArsdelSQL_connectionString": {
+						"value": "[parameters('VanArsdelSQL_connectionString')]"
+					},
+					"SouthridgeDataLake_properties_typeProperties_url": {
+						"value": "[parameters('SouthridgeDataLake_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
