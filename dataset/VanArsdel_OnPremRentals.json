@@ -1,0 +1,15 @@
+{
+	"name": "VanArsdel_OnPremRentals",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "VanArsdelSQL",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Sources"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": []
+	}
+}
