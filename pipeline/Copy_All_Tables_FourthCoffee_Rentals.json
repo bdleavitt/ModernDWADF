@@ -79,7 +79,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"filename": {
-											"value": "@concat(item().TABLE_SCHEMA,item().TABLE_NAME)",
+											"value": "@item().name",
 											"type": "Expression"
 										},
 										"source_company": "fourthcoffee",
