@@ -43,10 +43,15 @@
 						]
 					}
 				],
-				"userProperties": [],
+				"userProperties": [
+					{
+						"name": "tablename",
+						"value": "@item().TABLE_SCHEMA"
+					}
+				],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Get List of Tables').output.value",
+						"value": "@activity('Copy Table').output.value",
 						"type": "Expression"
 					},
 					"activities": [
@@ -106,7 +111,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"filename": {
-											"value": "@concat(item().TABLE_SCHEMA,item().TABLE_NAME)",
+											"value": "@item().TABLE_NAME",
 											"type": "Expression"
 										},
 										"source_company": "vanarsdel",
