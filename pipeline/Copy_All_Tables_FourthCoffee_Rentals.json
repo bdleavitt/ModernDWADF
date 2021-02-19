@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "For Each Table",
+				"name": "For Each Table test",
 				"type": "ForEach",
 				"dependsOn": [
 					{
