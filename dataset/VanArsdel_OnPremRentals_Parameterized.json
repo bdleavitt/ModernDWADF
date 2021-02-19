@@ -1,5 +1,5 @@
 {
-	"name": "VanArsdel_OnPremRentals",
+	"name": "VanArsdel_OnPremRentals_Parameterized",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "VanArsdelSQL",
