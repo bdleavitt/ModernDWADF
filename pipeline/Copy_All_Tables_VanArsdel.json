@@ -108,7 +108,9 @@
 										"filename": {
 											"value": "@concat(item().TABLE_SCHEMA,item().TABLE_NAME)",
 											"type": "Expression"
-										}
+										},
+										"source_company": "vanarsdel",
+										"source_system": "Rentals"
 									}
 								}
 							]
